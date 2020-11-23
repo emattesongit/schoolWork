@@ -47,7 +47,6 @@ public class PhoneBook {
 		entryArray[7] = (newEntry[1]);
 		entryArray[8] = (newEntry[1]);
 
-		// System.out.println(entryArray[0]);
 		createEntries(entryArray);
 		System.out.println(entryArray[0] + " has been added to the directory.");
 	}
@@ -57,7 +56,6 @@ public class PhoneBook {
 		String[] nameArray = new String[4];
 		String[] rs = record.split(" ");
 
-		// parse FullName
 		String firstName = rs[0];
 		String middleName = rs[1];
 		String lastName = rs[rs.length - 1];
@@ -84,7 +82,6 @@ public class PhoneBook {
 
 		entries = getEntries();
 
-		// Format phone number
 		String phn = myArray[8];
 		String phone = ("(" + phn.substring(0, 3) + ")-" + phn.substring(3, 6) + "-" + phn.substring(6, 10));
 
@@ -138,7 +135,7 @@ public class PhoneBook {
 		default:
 			System.out.println("Invalid function");
 			break;
-		} // End switch
+		}
 	}
 
 	public void displayDirectory() {
@@ -211,10 +208,8 @@ public class PhoneBook {
 				curRec[7] = entries.get(i).getAddress().getZipCode();
 				curRec[8] = phone;
 
-				// remove old record
 				entries.remove(entries.get(i));
 
-				// add new record
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);
@@ -253,7 +248,7 @@ public class PhoneBook {
 				Scanner input = new Scanner(System.in);
 				String newPhone = input.nextLine();
 
-				// load current record into array
+				/
 				curRec[0] = entries.get(i).getFullName();
 				curRec[1] = entries.get(i).getFirstName();
 				curRec[2] = entries.get(i).getMiddleName();
@@ -264,10 +259,10 @@ public class PhoneBook {
 				curRec[7] = entries.get(i).getAddress().getZipCode();
 				curRec[8] = newPhone;
 
-				// remove old record
+				
 				entries.remove(entries.get(i));
 
-				// add new record
+				
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);
@@ -305,7 +300,6 @@ public class PhoneBook {
 				Scanner input = new Scanner(System.in);
 				String newStreet = input.nextLine();
 
-				// load current record into array
 				curRec[0] = entries.get(i).getFullName();
 				curRec[1] = entries.get(i).getFirstName();
 				curRec[2] = entries.get(i).getMiddleName();
@@ -316,10 +310,8 @@ public class PhoneBook {
 				curRec[7] = entries.get(i).getAddress().getZipCode();
 				curRec[8] = phone;
 
-				// remove old record
 				entries.remove(entries.get(i));
 
-				// add new record
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);
@@ -357,7 +349,6 @@ public class PhoneBook {
 				Scanner input = new Scanner(System.in);
 				String newCity = input.nextLine();
 
-				// load current record into array
 				curRec[0] = entries.get(i).getFullName();
 				curRec[1] = entries.get(i).getFirstName();
 				curRec[2] = entries.get(i).getMiddleName();
@@ -368,10 +359,8 @@ public class PhoneBook {
 				curRec[7] = entries.get(i).getAddress().getZipCode();
 				curRec[8] = phone;
 
-				// remove old record
 				entries.remove(entries.get(i));
 
-				// add new record
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);
@@ -409,7 +398,6 @@ public class PhoneBook {
 				Scanner input = new Scanner(System.in);
 				String newState = input.nextLine();
 
-				// load current record into array
 				curRec[0] = entries.get(i).getFullName();
 				curRec[1] = entries.get(i).getFirstName();
 				curRec[2] = entries.get(i).getMiddleName();
@@ -420,10 +408,8 @@ public class PhoneBook {
 				curRec[7] = entries.get(i).getAddress().getZipCode();
 				curRec[8] = phone;
 
-				// remove old record
 				entries.remove(entries.get(i));
 
-				// add new record
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);
@@ -461,7 +447,6 @@ public class PhoneBook {
 				Scanner input = new Scanner(System.in);
 				String newZip = input.nextLine();
 
-				// load current record into array
 				curRec[0] = entries.get(i).getFullName();
 				curRec[1] = entries.get(i).getFirstName();
 				curRec[2] = entries.get(i).getMiddleName();
@@ -472,10 +457,8 @@ public class PhoneBook {
 				curRec[7] = newZip;
 				curRec[8] = phone;
 
-				// remove old record
 				entries.remove(entries.get(i));
 
-				// add new record
 				be1.setFullName(curRec[0]);
 				be1.setFirstName(curRec[1]);
 				be1.setMiddleName(curRec[2]);

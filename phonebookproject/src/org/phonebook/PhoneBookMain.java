@@ -42,7 +42,7 @@ public class PhoneBookMain {
 				System.out.println("\nPlease enter the phone number (eg: (123)-456-7890) of the record to remove:");
 				Scanner phoneDelete = new Scanner(System.in);
 				String phone = phoneDelete.nextLine();
-				// pb1.phoneList(phone);
+				
 				pb1.removeEntry(phone);
 				break;
 			case 3:
